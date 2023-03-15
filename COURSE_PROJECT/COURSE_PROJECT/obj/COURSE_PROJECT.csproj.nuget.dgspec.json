@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Downloads\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj": {}
+    "D:\\Bài tập lập trình\\DATA-SECURITY-IN-INFORMATION-SYSTEMS\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj": {}
   },
   "projects": {
-    "D:\\Downloads\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj": {
+    "D:\\Bài tập lập trình\\DATA-SECURITY-IN-INFORMATION-SYSTEMS\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Downloads\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj",
+        "projectUniqueName": "D:\\Bài tập lập trình\\DATA-SECURITY-IN-INFORMATION-SYSTEMS\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj",
         "projectName": "COURSE_PROJECT",
-        "projectPath": "D:\\Downloads\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj",
+        "projectPath": "D:\\Bài tập lập trình\\DATA-SECURITY-IN-INFORMATION-SYSTEMS\\COURSE_PROJECT\\COURSE_PROJECT\\COURSE_PROJECT.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Downloads\\COURSE_PROJECT\\COURSE_PROJECT\\obj\\",
+        "outputPath": "D:\\Bài tập lập trình\\DATA-SECURITY-IN-INFORMATION-SYSTEMS\\COURSE_PROJECT\\COURSE_PROJECT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
