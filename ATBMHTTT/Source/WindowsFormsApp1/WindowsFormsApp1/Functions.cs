@@ -14,7 +14,8 @@ namespace Funnction
     {
         [Obsolete]
         public static OracleConnection Connect;
-        private static string host_name = @"DESKTOP-9QUAAMR";
+        private static string host_name = System.Windows.Forms.SystemInformation.ComputerName;
+        //private static string host_name = @"DESKTOP-9QUAAMR";
 
         [Obsolete]
         public static void InitConnection(String username, String password)
