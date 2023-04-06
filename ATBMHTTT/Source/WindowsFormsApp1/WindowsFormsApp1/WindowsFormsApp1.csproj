@@ -79,16 +79,46 @@
     <Compile Include="Admin\CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\DeleteUserOrRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\DeleteUserOrRole.Designer.cs">
+      <DependentUpon>DeleteUserOrRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GrantAndEditPrivilegesUserOrRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GrantAndEditPrivilegesUserOrRule.Designer.cs">
+      <DependentUpon>GrantAndEditPrivilegesUserOrRule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ListPrivileges.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\ListPrivileges.Designer.cs">
       <DependentUpon>ListPrivileges.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Main.cs">
+    <Compile Include="Admin\RevokePrivilege.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Main.Designer.cs">
+    <Compile Include="Admin\RevokePrivilege.Designer.cs">
+      <DependentUpon>RevokePrivilege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TableAndView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\TableAndView.Designer.cs">
+      <DependentUpon>TableAndView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Init\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Init\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
@@ -106,10 +136,25 @@
     <EmbeddedResource Include="Admin\CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\DeleteUserOrRole.resx">
+      <DependentUpon>DeleteUserOrRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GrantAndEditPrivilegesUserOrRule.resx">
+      <DependentUpon>GrantAndEditPrivilegesUserOrRule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\ListPrivileges.resx">
       <DependentUpon>ListPrivileges.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Main.resx">
+    <EmbeddedResource Include="Admin\RevokePrivilege.resx">
+      <DependentUpon>RevokePrivilege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\TableAndView.resx">
+      <DependentUpon>TableAndView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Init\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Init\Login.resx">

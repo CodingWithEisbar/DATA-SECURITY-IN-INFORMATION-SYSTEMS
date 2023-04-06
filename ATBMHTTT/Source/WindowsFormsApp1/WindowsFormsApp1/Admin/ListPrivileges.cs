@@ -14,9 +14,12 @@ namespace WindowsFormsApp1.Admin
     public partial class ListPrivileges : Form
     {
         [Obsolete]
-        public ListPrivileges()
+        string username, password; 
+        public ListPrivileges(string usename,string password)
         {
             InitializeComponent();
+            this.username=usename;
+            this.password=password;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -28,7 +31,20 @@ namespace WindowsFormsApp1.Admin
         private void button2_Click(object sender, EventArgs e)
         {
             string sql = "select*from dba_tab_privs where grantee='" + textBox1.Text.Trim().ToUpper() + "'";
-            Support.InitConnection("admin", "admin");
+            Support.InitConnection(this.username, this.password);
+            dataGridView1.DataSource = Support.GetDataToTable(sql);
+            Support.Disconnect();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string sql = "select*from dba_col_privs where grantee='" + textBox1.Text.Trim().ToUpper() +"'";
+            Support.InitConnection(this.username, this.password);
             dataGridView1.DataSource = Support.GetDataToTable(sql);
             Support.Disconnect();
         }

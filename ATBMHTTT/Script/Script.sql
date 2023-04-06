@@ -12,10 +12,9 @@ drop CONSTRAINT FK_PHANCONG_NHANVIEN;
 
 ALTER TABLE PHANCONG
 drop CONSTRAINT FK_PHANCONG_PHONGBAN;
-
 drop table NHANVIEN;
 CREATE TABLE NHANVIEN (
-    MANV NUMBER(4),
+    MANV NUMBER(4) generated always as identity(start with 1 increment by 1),
     Username varchar2(100),
     TENNV VARCHAR2(100),
     PHAI VARCHAR2(10),
@@ -33,7 +32,7 @@ CREATE TABLE NHANVIEN (
 );
 drop table PHONGBAN;
 CREATE TABLE PHONGBAN (
-    MAPB NUMBER(4),
+    MAPB NUMBER(4) generated always as identity(start with 1 increment by 1),
     TENPB VARCHAR2(100),
     TRPHG NUMBER(4),
     
@@ -42,7 +41,7 @@ CREATE TABLE PHONGBAN (
 );
 drop table DEAN;
 CREATE TABLE DEAN (
-    MADA NUMBER(4),
+    MADA NUMBER(4) generated always as identity(start with 1 increment by 1),
     TENDA VARCHAR2(100),
     NGAYBD DATE,
     PHONG number(4),
@@ -88,20 +87,21 @@ FOREIGN KEY(MADA)
 REFERENCES DEAN(MADA);
 
 --Nhan vien--
-INSERT INTO Nhanvien(MANV,Username,TENNV,PHAI,NGAYSINH,DIACHI,SODT,LUONG,PHUCAP,VAITRO,MANQL,PHG) 
-VALUES (1,N'ADMIN' ,N'Nguyen Van A', 'NAM',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),N'Tp. Da Lat','0852576282',1,1,N'Nhanvien',2,null);
+INSERT INTO Nhanvien(Username,TENNV,PHAI,NGAYSINH,DIACHI,SODT,LUONG,PHUCAP,VAITRO,MANQL,PHG) 
+VALUES (N'admin' ,N'Nguyen Van A', 'NAM',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),N'Tp. Da Lat','0852576282',1,1,N'Nhanvien',2,null);
+select*from nhanvien;
 
-INSERT INTO Nhanvien(MANV,Username,TENNV,PHAI,NGAYSINH,DIACHI,SODT,LUONG,PHUCAP,VAITRO,MANQL,PHG) 
-VALUES (2,N'QLTT' ,N'Nguyen Van A', 'NAM',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),N'Tp. Da Lat','0852576282',1,1,N'Quanly',1,null);
+INSERT INTO Nhanvien(Username,TENNV,PHAI,NGAYSINH,DIACHI,SODT,LUONG,PHUCAP,VAITRO,MANQL,PHG) 
+VALUES (N'QLTT' ,N'Nguyen Van A', 'NAM',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),N'Tp. Da Lat','0852576282',1,1,N'Quanly',1,null);
 
-INSERT INTO Nhanvien(MANV,Username,TENNV,PHAI,NGAYSINH,DIACHI,SODT,LUONG,PHUCAP,VAITRO,MANQL,PHG) 
-VALUES (3,N'TDA' ,N'Nguyen Van A', 'NAM',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),N'Tp. Da Lat','0852576282',1,1,N'TRUONGPHONG',NULL,null);
+INSERT INTO Nhanvien(Username,TENNV,PHAI,NGAYSINH,DIACHI,SODT,LUONG,PHUCAP,VAITRO,MANQL,PHG) 
+VALUES (N'TDA' ,N'Nguyen Van A', 'NAM',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),N'Tp. Da Lat','0852576282',1,1,N'TRUONGPHONG',NULL,null);
 
 --Phongban--
-INSERT INTO PHONGBAN (MAPB,TENPB,TRPHG) VALUES (1,N'x',3);
+INSERT INTO PHONGBAN (TENPB,TRPHG) VALUES (N'x',3);
 
 --Dean--
-INSERT INTO DeAn (MADA,TENDA,NGAYBD,PHONG) VALUES (1,N'y',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),1);
+INSERT INTO DeAn (TENDA,NGAYBD,PHONG) VALUES (N'y',TO_DATE('2001/12/16 ', 'yyyy/mm/dd '),1);
 
 --PhanCong--
 INSERT INTO PHANCONG(MANV,MADA,THOIGIAN) VALUES (1,1,TO_DATE('2001/12/16 ', 'yyyy/mm/dd '));
@@ -140,7 +140,6 @@ RETURN VARCHAR2
 AS
 user VARCHAR2(100);
 BEGIN
-    user := SYS_CONTEXT('userenv', 'SESSION_USER');
     RETURN 'USERNAME = SYS_CONTEXT(''userenv'', ''SESSION_USER'')';
 END;
 /
@@ -322,6 +321,3 @@ grant delete on Dean to Truongdean;
 grant GeneralRole to TDA;
 grant Nhanvien to TDA;
 grant Truongdean to TDA;
-
-
-

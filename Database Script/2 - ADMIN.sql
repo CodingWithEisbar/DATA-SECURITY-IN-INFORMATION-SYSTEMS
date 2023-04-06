@@ -23,7 +23,7 @@ GRANT ALL PRIVILEGES TO ADMIN with admin option;
 
 select*from dba_users;
 
-SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE ='ADMIN';--tùy công d?ng mà s? d?ng
+SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE ='ADMIN';--tï¿½y cï¿½ng d?ng mï¿½ s? d?ng
 SELECT role FROM ROLE_TAB_PRIVS WHERE ROLE ='ROLE_NAME';--??
 
 
@@ -52,13 +52,8 @@ drop user TDA;
 create user TDA IDENTIFIED BY TDA;
 GRANT CREATE SESSION TO TDA;
 
-select*from user_role_privs;
+grant execute on dbms_rls to admin;
 
---database
---- TAO BANG DU LIEU
-
-----------------------------------------------------------------------------------
---- NHAP THONG TIN VAO BANG
 
 
 

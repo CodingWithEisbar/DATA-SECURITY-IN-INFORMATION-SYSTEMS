@@ -14,34 +14,29 @@ namespace Funnction
     {
         [Obsolete]
         public static OracleConnection Connect;
-        private static string host_name = System.Windows.Forms.SystemInformation.ComputerName;
-        //private static string host_name = @"DESKTOP-9QUAAMR";
+        private static string host_name = @"DESKTOP-9QUAAMR";
 
         [Obsolete]
-        public static void InitConnection(String username, String password)
+        public static string InitConnection(String username, String password)
         {
             String connectionString = @"Data Source=" + host_name + ";User ID=" + username + ";Password=" + password + "";
 
             Connect = new OracleConnection();
             Connect.ConnectionString = connectionString;
-
+            string res = "";
             try
             {
                 //Mở kết nối
                 Connect.Open();
 
-                ////Kiểm tra kết nối
-                if (Connect.State == ConnectionState.Open)
-                {
-                    MessageBox.Show("Kết nối DB thành công");
-                }
-
             }
             catch (OracleException ex)
             {
                 Connect = null;
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
+                res = ex.Message;
             }
+            return res;
         }
 
         [Obsolete]
@@ -70,6 +65,33 @@ namespace Funnction
             DataTable dataTable= new DataTable();
             adapter.Fill(dataTable);
             return dataTable;
+        }
+
+        public static void RunSQL(string sql)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = Connect;
+            cmd.CommandText= sql;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex) { 
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public static string GetFieldValues(String sql)
+        {
+            string ma = "";
+            OracleCommand cmd = new OracleCommand(sql, Connect);
+            OracleDataReader reader= cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                ma=reader.GetValue(0).ToString();
+            }
+            reader.Close();
+            return ma;
         }
     }
 }

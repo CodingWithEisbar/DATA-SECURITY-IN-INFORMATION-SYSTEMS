@@ -24,12 +24,12 @@ namespace WindowsFormsApp1.Admin
             this.password= password;
             loadData();
         }
-
+        //last_login is not null and
         [Obsolete]
         private void loadData()
         {
             string sql = "select*from dba_users where last_login is not null and default_tablespace='USERS'";
-            Support.InitConnection("admin", "admin");
+            Support.InitConnection(this.userName, this.password);
             dataGridView1.DataSource= Support.GetDataToTable(sql);
             Support.Disconnect();
 

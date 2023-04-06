@@ -13,18 +13,8 @@ E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsA
 E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.Main.resources
 E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.ListPrivileges.resources
 E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.CreateUser.resources
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe.config
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.pdb
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.AllUser.resources
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.CreateUser.resources
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.ListPrivileges.resources
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.Main.resources
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Init.Login.resources
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Properties.Resources.resources
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.exe
-D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.pdb
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.DeleteUserOrRole.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.EditUser.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.GrantAndEditPrivilegesUserOrRule.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.RevokePrivilege.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.TableAndView.resources

@@ -9,3 +9,7 @@ E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.
 E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Init.Login.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Admin.AllUser.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Admin.CreateUser.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Admin.ListPrivileges.resources
+E:\ATBMHTTT\Source\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Admin.Main.resources
