@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Init;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1.Admin
 {
@@ -72,12 +74,23 @@ namespace WindowsFormsApp1.Admin
         {
            this.Close();
            t = new Thread(AllUser);
-           t.Start();
+            t.Start();
         }
 
+        private void BackToLogin()
+        { 
+
+            Application.Run(new Login());
+
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
+            Thread t;
+            this.Close();
+            t = new Thread(BackToLogin);
+            t.Start();
+
         }
 
         private void button4_Click(object sender, EventArgs e)

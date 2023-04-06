@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -86,6 +87,19 @@ namespace WindowsFormsApp1.Admin
 
         }
 
+        private void Home()
+        {
+            Application.Run(new Main(this.username, this.password));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Thread t;
+            this.Close();
+            t = new Thread(Home);
+            t.Start();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if(comboBox2.Text != "UPDATE")
@@ -100,6 +114,7 @@ namespace WindowsFormsApp1.Admin
                 else 
                 {
                     string sql = "GRANT " + comboBox2.Text + " ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + "";
+                    
                     Support.InitConnection(this.username, this.password);
                     Support.RunSQL(sql);
                     Support.Disconnect();
@@ -136,7 +151,9 @@ namespace WindowsFormsApp1.Admin
                     }
                     else
                     {
+                        
                         string sql = "GRANT " + comboBox2.Text + " (" + textBox5.Text + ") ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + "";
+                        MessageBox.Show(sql);
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);
                         Support.Disconnect();

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
@@ -67,6 +68,19 @@ namespace WindowsFormsApp1.Admin
                 Support.Disconnect();
         }
 
+        private void Home()
+        {
+            Application.Run(new Main(this.username, this.password));
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Thread t;
+            this.Close();
+            t = new Thread(Home);
+            t.Start();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (comboBox2.Text != "UPDATE")
@@ -78,22 +92,22 @@ namespace WindowsFormsApp1.Admin
             }
             else
             {
-                if (textBox5.Text == "")
-                {
+                //if (textBox5.Text == "")
+                //{
                     
                         string sql = "REVOKE " + comboBox2.Text + " ON " + comboBox1.Text + " FROM " + textBox4.Text.Trim() + "";
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);
                         Support.Disconnect();
                     
-                }
-                else
+                //}
+                /*else
                 {
                         string sql = "REVOKE " + comboBox2.Text + " (" + textBox5.Text + ") ON " + comboBox1.Text + " FROM " + textBox4.Text.Trim() + "";
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);
                         Support.Disconnect();
-                }
+                }*/
             }
         }
     }

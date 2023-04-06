@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -36,9 +37,17 @@ namespace WindowsFormsApp1.Admin
             Support.Disconnect();
         }
 
+        private void Home()
+        {
+            Application.Run(new Main(this.username, this.password));
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Thread t;
+            this.Close();
+            t = new Thread(Home);
+            t.Start();
         }
 
         private void button3_Click(object sender, EventArgs e)
