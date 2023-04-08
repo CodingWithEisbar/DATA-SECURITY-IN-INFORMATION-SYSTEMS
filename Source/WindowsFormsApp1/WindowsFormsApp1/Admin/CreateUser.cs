@@ -32,8 +32,9 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.userName, this.password));
         }
 
+        // Tạo nguòi dùng mới
         private void button2_Click(object sender, EventArgs e)
-        {
+        {   
             Support.InitConnection(this.userName, this.password);
             if (textBox1.Text.Trim()==""&& textBox2.Text.Trim() == "" && comboBox1.Text.Trim()=="")
             {
@@ -42,6 +43,7 @@ namespace WindowsFormsApp1.Admin
             }
             else if (Support.GetFieldValues("select* from dba_users where username='" + textBox1.Text.Trim().ToUpper() + "'") != "")
             {
+                // Thông báo UserName đã tồn tại
                 MessageBox.Show("UserName tồn tại");
                 Support.Disconnect();
             }
@@ -81,6 +83,7 @@ namespace WindowsFormsApp1.Admin
 
         }
 
+        // Tạo Role mới
         private void button3_Click(object sender, EventArgs e)
         {
             Support.InitConnection(this.userName, this.password);    
@@ -93,6 +96,7 @@ namespace WindowsFormsApp1.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Quay lại
             Thread t;
             this.Close();
             t = new Thread(Home);

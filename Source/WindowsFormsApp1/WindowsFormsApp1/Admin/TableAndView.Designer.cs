@@ -56,9 +56,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(405, 184);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(355, 184);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 31);
+            this.button2.Size = new System.Drawing.Size(137, 31);
             this.button2.TabIndex = 6;
             this.button2.Text = "Xem Bảng";
             this.button2.UseVisualStyleBackColor = true;
@@ -66,9 +67,10 @@
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(737, 184);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 31);
+            this.button3.Size = new System.Drawing.Size(131, 31);
             this.button3.TabIndex = 7;
             this.button3.Text = "Xem View";
             this.button3.UseVisualStyleBackColor = true;

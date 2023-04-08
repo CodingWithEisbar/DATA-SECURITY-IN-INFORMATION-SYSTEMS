@@ -19,6 +19,7 @@ namespace Funnction
         [Obsolete]
         public static string InitConnection(String username, String password)
         {
+            // Hàm tạo kết nối
             String connectionString = @"Data Source=" + host_name + ";User ID=" + username + ";Password=" + password + "";
 
             Connect = new OracleConnection();

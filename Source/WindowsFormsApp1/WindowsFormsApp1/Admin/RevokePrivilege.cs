@@ -75,6 +75,7 @@ namespace WindowsFormsApp1.Admin
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            //Nút quay lại
             Thread t;
             this.Close();
             t = new Thread(Home);
