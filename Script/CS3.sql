@@ -1,0 +1,48 @@
+--cs3--
+CREATE OR REPLACE VIEW NhanVien_Select_TP AS
+SELECT distinct NV.MANV,NV.Username,NV.TENNV,NV.PHAI,NV.NGAYSINH,NV.DIACHI,NV.SODT,NV.VAITRO,NV.MANQL,NV.PHG,decode(NV.Username,SYS_CONTEXT ('USERENV', 'SESSION_USER'),luong) luong,decode(NV.Username,SYS_CONTEXT ('USERENV', 'SESSION_USER'),phucap) phucap
+FROM NHANVIEN NV
+union
+SELECT distinct NV2.MANV,NV2.Username,NV2.TENNV,NV2.PHAI,NV2.NGAYSINH,NV2.DIACHI,NV2.SODT,NV2.VAITRO,NV2.MANQL,NV2.PHG,decode(NV2.Username,null,NV2.luong) luong,decode(NV2.Username,null,Nv2.phucap) phucap
+FROM NHANVIEN NV1,Nhanvien NV2,PHONGBAN PB
+where NV1.UserName=SYS_CONTEXT ('USERENV', 'SESSION_USER') and nv1.manv!=nv2.manv and nv1.vaitro=N'TRUONGPHONG' and PB.TRPHG=NV1.MANV AND NV2.PHG=PB.MAPB
+with check option;
+
+CREATE OR REPLACE VIEW PhanCong_Select_TP AS
+SELECT PC.MANV,PC.MADA,PC.THOIGIAN
+FROM NHANVIEN NV1,Nhanvien NV2,PHONGBAN PB,PHANCONG PC
+where NV1.UserName=SYS_CONTEXT ('USERENV', 'SESSION_USER') and nv1.vaitro=N'TRUONGPHONG' and PB.TRPHG=NV1.MANV AND NV2.PHG=PB.MAPB AND PC.MANV=NV2.MANV;
+
+---DROP TRIGGER updateTP;
+CREATE OR REPLACE TRIGGER updateTP
+    INSTEAD OF UPDATE ON PhanCong_Select_QL
+    FOR EACH ROW
+BEGIN
+    Update PhanCong set manv=:new.manv, MADA=:new.MADA, THOIGIAN=:new.THOIGIAN;
+END;
+/
+CREATE OR REPLACE TRIGGER insertTP
+    INSTEAD OF INSERT ON PhanCong_Select_QL
+    FOR EACH ROW
+DECLARE
+    MaNV1 NUMBER(4);
+    MaDA1 NUMBER(4);
+BEGIN
+    INSERT INTO PhanCong(manv, MADA, THOIGIAN)
+    VALUES(:NEW.manv,:NEW.MADA, :NEW.THOIGIAN);
+END;
+/
+CREATE OR REPLACE TRIGGER deleteTP
+INSTEAD OF DELETE ON PhanCong_Select_QL
+FOR EACH ROW
+BEGIN
+  DELETE FROM PhanCong WHERE manv=:old.manv and MADA=:old.MADA;
+END;
+/
+grant select on NhanVien_Select_TP to TRUONGPHONG;
+grant select on PhanCong_Select_TP to TRUONGPHONG;
+grant update on PhanCong_Select_TP to TRUONGPHONG;
+grant delete on PhanCong_Select_TP to TRUONGPHONG;
+grant insert on PhanCong_Select_TP to TRUONGPHONG;
+grant TRUONGPHONG to TP;
+grant GeneralRole to TP; ---
