@@ -128,7 +128,7 @@ VALUES (N'SUSAN', N'NU', TO_DATE('23-05-1998','dd-mm-yyyy'), N'16 SANCHEZ', N'03
 INSERT INTO NHANVIEN (TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, MANQL, PHG, USERNAME)
 VALUES (N'KATE', N'NU', TO_DATE('13-10-1990','dd-mm-yyyy'), N'23 THOMAS MILLER', N'0840667154',2000,1000,N'Nhan vien',NULL,NULL, 'NV3');
 INSERT INTO NHANVIEN (TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, MANQL, PHG, USERNAME)
-VALUES (N'NATASHA', N'NU', TO_DATE('13-10-2000','dd-mm-yyyy'), N'23 JOHN HOPKINS', N'0840667345',2000,1000,N'Nhan vien',NULL,NULL, 'NV3');
+VALUES (N'NATASHA', N'NU', TO_DATE('13-10-2000','dd-mm-yyyy'), N'23 JOHN HOPKINS', N'0840667345',2000,1000,N'Nhan vien',NULL,NULL, 'NV4');
 
 --- B. PHONG BAN
 INSERT INTO PHONGBAN (TENPB, TRPHG)
@@ -202,11 +202,35 @@ drop role TruongDeAn;
 drop role BanGiamDoc;
 drop role GeneralRole; ---
 
-create role Nhanvien;
-create role QLTrucTiep;
-create role TruongPhong;
-create role TaiChinh;
-create role NhanSu;
-create role TruongDeAn;
 create role BanGiamDoc;
+
+create role Nhanvien;
+grant Nhanvien to NV1;
+grant Nhanvien to NV2;
+grant Nhanvien to NV3;
+grant Nhanvien to NV4;
+
+create role QLTrucTiep;
+grant QLTrucTiep to QLTT1;
+grant QLTrucTiep to QLTT2;
+
+create role TruongPhong;
+grant TruongPhong to TP1;
+grant TruongPhong to TP2;
+grant TruongPhong to TP3;
+grant TruongPhong to TP4;
+
+create role TaiChinh;
+grant TaiChinh to TC1;
+grant TaiChinh to TC2;
+
+create role NhanSu;
+grant NhanSu to NS1;
+grant NhanSu to NS2;
+
+create role TruongDeAn;
+grant TruongDeAn to TDA1;
+grant TruongDeAn to TDA2;
+grant TruongDeAn to TDA3;
+
 create role GeneralRole;
