@@ -128,8 +128,26 @@
     <Compile Include="Init\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu\NhanSu_INS_UPD_SHOW_Phongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\NhanSu_INS_UPD_SHOW_Phongban.Designer.cs">
+      <DependentUpon>NhanSu_INS_UPD_SHOW_Phongban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\NhanSu_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\NhanSu_Main.Designer.cs">
+      <DependentUpon>NhanSu_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaiChinh\TaiChinh_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\TaiChinh_Main.Designer.cs">
+      <DependentUpon>TaiChinh_Main.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\AllUser.resx">
       <DependentUpon>AllUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +178,12 @@
     <EmbeddedResource Include="Init\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\NhanSu_INS_UPD_SHOW_Phongban.resx">
+      <DependentUpon>NhanSu_INS_UPD_SHOW_Phongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\NhanSu_Main.resx">
+      <DependentUpon>NhanSu_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -169,6 +193,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TaiChinh\TaiChinh_Main.resx">
+      <DependentUpon>TaiChinh_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

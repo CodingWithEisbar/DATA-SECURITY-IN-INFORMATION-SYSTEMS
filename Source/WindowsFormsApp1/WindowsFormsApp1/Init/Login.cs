@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 using Funnction;
 using System.Threading;
 using WindowsFormsApp1.Admin;
+using WindowsFormsApp1.NhanSu;
+using WindowsFormsApp1.TaiChinh;
 
 namespace WindowsFormsApp1.Init
 {
@@ -18,6 +20,8 @@ namespace WindowsFormsApp1.Init
     {
         Thread t;
         private string userName, password;
+        string NSu = "NS";
+        string Tchinh = "TC";
         public Login()
         {
             InitializeComponent();
@@ -44,9 +48,16 @@ namespace WindowsFormsApp1.Init
 
             Application.Run(new Main(this.userName,this.password));
         }
-        
+        private void NhanSu()
+        {
+            Application.Run(new NhanSu_Main(this.userName, this.password));
+        }
+        private void TaiChinh()
+        {
+            Application.Run(new TaiChinh_Main(this.userName, this.password));
+        }
         [Obsolete]
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
             try
             {
@@ -54,13 +65,24 @@ namespace WindowsFormsApp1.Init
                 this.password= textBox2.Text.Trim();   
                 InitLogin(this.userName, this.password);
                 this.Close();
-                t = new Thread(Main);
+                if (this.userName.Contains(NSu))
+                {
+                    t = new Thread(NhanSu);
+                }
+                if (this.userName == "admin" || this.userName == "ADMIN")
+                { 
+                    t = new Thread(Main); 
+                }
+                if (this.userName.Contains(Tchinh))
+                {
+                    t = new Thread(TaiChinh);
+                }
                 t.Start();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Messeage",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message,"Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
