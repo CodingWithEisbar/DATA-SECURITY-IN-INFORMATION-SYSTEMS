@@ -58,3 +58,24 @@ D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFo
 D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.exe
 D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.pdb
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe.config
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.pdb
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.AllUser.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.CreateUser.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.DeleteUserOrRole.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.EditUser.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.GrantAndEditPrivilegesUserOrRule.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.ListPrivileges.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.RevokePrivilege.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.TableAndView.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Admin.Main.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Init.Login.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.exe
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.pdb
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.NhanSu.NhanSu_Main.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.TaiChinh.TaiChinh_Main.resources
