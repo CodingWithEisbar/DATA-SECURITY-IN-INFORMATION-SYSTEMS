@@ -33,15 +33,15 @@ namespace WindowsFormsApp1.Admin
         }
 
         // Tạo nguòi dùng mới
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAddUser_Click(object sender, EventArgs e)
         {   
             Support.InitConnection(this.userName, this.password);
-            if (textBox1.Text.Trim()==""&& textBox2.Text.Trim() == "" && comboBox1.Text.Trim()=="")
+            if (txbUserName.Text.Trim()==""&& txbPassword.Text.Trim() == "" && cbbRole.Text.Trim()=="")
             {
                 MessageBox.Show("Nhập đầy đủ thông tin");
                 MessageBox.Show(this.userName, this.password);
             }
-            else if (Support.GetFieldValues("select* from dba_users where username='" + textBox1.Text.Trim().ToUpper() + "'") != "")
+            else if (Support.GetFieldValues("select* from dba_users where username='" + txbUserName.Text.Trim().ToUpper() + "'") != "")
             {
                 // Thông báo UserName đã tồn tại
                 MessageBox.Show("UserName tồn tại");
@@ -54,13 +54,13 @@ namespace WindowsFormsApp1.Admin
                     string sql = "alter session set \"_ORACLE_SCRIPT\"=true";
                     Support.RunSQL(sql);
 
-                    sql = "create user " + textBox1.Text.Trim() + " IDENTIFIED BY " + textBox2.Text.Trim() + "";
+                    sql = "create user " + txbUserName.Text.Trim() + " IDENTIFIED BY " + txbPassword.Text.Trim() + "";
                     Support.RunSQL(sql);
 
-                    sql = "GRANT CREATE SESSION TO " + textBox1.Text.Trim() + "";
+                    sql = "GRANT CREATE SESSION TO " + txbUserName.Text.Trim() + "";
                     Support.RunSQL(sql);
                     
-                    sql = "insert into Nhanvien(Username,vaitro) values ('" + textBox1.Text.Trim() + "','" + comboBox1.Text.Trim() + "')";
+                    sql = "insert into Nhanvien(Username,vaitro) values ('" + txbUserName.Text.Trim() + "','" + cbbRole.Text.Trim() + "')";
                     MessageBox.Show(sql);
                     Support.RunSQL(sql);
                 }
@@ -84,17 +84,17 @@ namespace WindowsFormsApp1.Admin
         }
 
         // Tạo Role mới
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAddRole_Click(object sender, EventArgs e)
         {
             Support.InitConnection(this.userName, this.password);    
             string sql = "alter session set \"_ORACLE_SCRIPT\"=true";
             Support.RunSQL(sql);
-            sql = "CREATE ROLE " + textBox4.Text.Trim();
+            sql = "CREATE ROLE " + txbRoleName.Text.Trim();
             Support.RunSQL(sql);
             Support.Disconnect();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             // Quay lại
             Thread t;

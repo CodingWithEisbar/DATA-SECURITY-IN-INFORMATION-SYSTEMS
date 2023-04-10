@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnShowAllTable = new System.Windows.Forms.Button();
+            this.btnShowAllView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(55, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 34);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Quay Lại";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(55, 34);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(118, 34);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "Quay Lại";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dataGridView1
             // 
@@ -54,37 +54,37 @@
             this.dataGridView1.Size = new System.Drawing.Size(1213, 346);
             this.dataGridView1.TabIndex = 5;
             // 
-            // button2
+            // btnShowAllTable
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(355, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 31);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Xem Bảng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnShowAllTable.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAllTable.Location = new System.Drawing.Point(355, 184);
+            this.btnShowAllTable.Name = "btnShowAllTable";
+            this.btnShowAllTable.Size = new System.Drawing.Size(137, 31);
+            this.btnShowAllTable.TabIndex = 6;
+            this.btnShowAllTable.Text = "Xem Bảng";
+            this.btnShowAllTable.UseVisualStyleBackColor = true;
+            this.btnShowAllTable.Click += new System.EventHandler(this.btnShowAllTable_Click);
             // 
-            // button3
+            // btnShowAllView
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(737, 184);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 31);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Xem View";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnShowAllView.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAllView.Location = new System.Drawing.Point(737, 184);
+            this.btnShowAllView.Name = "btnShowAllView";
+            this.btnShowAllView.Size = new System.Drawing.Size(131, 31);
+            this.btnShowAllView.TabIndex = 7;
+            this.btnShowAllView.Text = "Xem View";
+            this.btnShowAllView.UseVisualStyleBackColor = true;
+            this.btnShowAllView.Click += new System.EventHandler(this.btnShowAllView_Click);
             // 
             // TableAndView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 641);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnShowAllView);
+            this.Controls.Add(this.btnShowAllTable);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Name = "TableAndView";
             this.Text = "TableAndView";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -94,9 +94,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnShowAllTable;
+        private System.Windows.Forms.Button btnShowAllView;
     }
 }

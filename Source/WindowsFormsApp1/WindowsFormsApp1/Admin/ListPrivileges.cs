@@ -29,9 +29,9 @@ namespace WindowsFormsApp1.Admin
         }
 
         [Obsolete]
-        private void button2_Click(object sender, EventArgs e)
+        private void btnShowTablePrivilege_Click(object sender, EventArgs e)
         {
-            string sql = "select*from dba_tab_privs where grantee='" + textBox1.Text.Trim().ToUpper() + "'";
+            string sql = "select*from dba_tab_privs where grantee='" + txbUserOrRole.Text.Trim().ToUpper() + "'";
             Support.InitConnection(this.username, this.password);
             dataGridView1.DataSource = Support.GetDataToTable(sql);
             Support.Disconnect();
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.username, this.password));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Thread t;
             this.Close();
@@ -50,9 +50,9 @@ namespace WindowsFormsApp1.Admin
             t.Start();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnOnColUpdatePriv_Click(object sender, EventArgs e)
         {
-            string sql = "select*from dba_col_privs where grantee='" + textBox1.Text.Trim().ToUpper() +"'";
+            string sql = "select*from dba_col_privs where grantee='" + txbUserOrRole.Text.Trim().ToUpper() +"'";
             Support.InitConnection(this.username, this.password);
             dataGridView1.DataSource = Support.GetDataToTable(sql);
             Support.Disconnect();

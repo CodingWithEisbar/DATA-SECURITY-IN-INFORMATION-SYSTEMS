@@ -29,7 +29,7 @@ namespace WindowsFormsApp1.Admin
         }
         private void loadData()
         {
-            string sql = "select column_name from all_tab_columns where table_name = '"+comboBox1.Text.Trim().ToUpper()+"'";
+            string sql = "select column_name from all_tab_columns where table_name = '"+cbbTable.Text.Trim().ToUpper()+"'";
             Support.InitConnection(this.username, this.password);
             dataGridView1.DataSource = Support.GetDataToTable(sql);
             Support.Disconnect();
@@ -55,9 +55,9 @@ namespace WindowsFormsApp1.Admin
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnGrantRole_Click(object sender, EventArgs e)
         {
-            string sql = "grant " + comboBox3.Text + " to " + comboBox4.Text + "";
+            string sql = "grant " + cbbRole.Text + " to " + cbbUSER.Text + "";
             Support.InitConnection(this.username, this.password);
             Support.RunSQL(sql);
             Support.Disconnect();
@@ -71,7 +71,7 @@ namespace WindowsFormsApp1.Admin
             Support.Disconnect();
             foreach (DataRow row in all_role.Rows) 
             {
-                comboBox3.Items.Add(row["ROLE"]).ToString();
+                cbbRole.Items.Add(row["ROLE"]).ToString();
             }
             sql = "select username from dba_users where last_login is not null and default_tablespace='USERS'";
             Support.InitConnection(this.username, this.password);
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1.Admin
             Support.Disconnect();
             foreach (DataRow row in all_user.Rows)
             {
-                comboBox4.Items.Add(row["username"]).ToString();
+                cbbUSER.Items.Add(row["username"]).ToString();
             }
         }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.username, this.password));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Thread t;
             this.Close();
@@ -100,20 +100,20 @@ namespace WindowsFormsApp1.Admin
             t.Start();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnGrantPrivilege_Click(object sender, EventArgs e)
         {
-            if(comboBox2.Text != "UPDATE")
+            if(cbbPrivilege.Text != "UPDATE")
             {
-                if (checkBox2.Checked==true)
+                if (chboxWithGrantOption.Checked==true)
                 {
-                    string sql = "GRANT " + comboBox2.Text + " ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + " with grant option";
+                    string sql = "GRANT " + cbbPrivilege.Text + " ON " + cbbTable.Text + " TO " + txbRoleOrUserName.Text.Trim() + " with grant option";
                     Support.InitConnection(this.username, this.password);
                     Support.RunSQL(sql);
                     Support.Disconnect();
                 }
                 else 
                 {
-                    string sql = "GRANT " + comboBox2.Text + " ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + "";
+                    string sql = "GRANT " + cbbPrivilege.Text + " ON " + cbbTable.Text + " TO " + txbRoleOrUserName.Text.Trim() + "";
                     
                     Support.InitConnection(this.username, this.password);
                     Support.RunSQL(sql);
@@ -123,18 +123,18 @@ namespace WindowsFormsApp1.Admin
             }
             else 
             {
-                if(textBox5.Text=="")
+                if(txbColumn.Text=="")
                 {
-                    if (checkBox2.Checked == true)
+                    if (chboxWithGrantOption.Checked == true)
                     {
-                        string sql = "GRANT " + comboBox2.Text + " ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + " with grant option";
+                        string sql = "GRANT " + cbbPrivilege.Text + " ON " + cbbTable.Text + " TO " + txbRoleOrUserName.Text.Trim() + " with grant option";
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);
                         Support.Disconnect();
                     }
                     else
                     {
-                        string sql = "GRANT " + comboBox2.Text + " ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + "";
+                        string sql = "GRANT " + cbbPrivilege.Text + " ON " + cbbTable.Text + " TO " + txbRoleOrUserName.Text.Trim() + "";
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);
                         Support.Disconnect();
@@ -142,9 +142,9 @@ namespace WindowsFormsApp1.Admin
                 }
                 else 
                 {
-                    if (checkBox2.Checked == true)
+                    if (chboxWithGrantOption.Checked == true)
                     {
-                        string sql = "GRANT " + comboBox2.Text + " (" + textBox5.Text + ") ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + " with grant option";
+                        string sql = "GRANT " + cbbPrivilege.Text + " (" + txbColumn.Text + ") ON " + cbbTable.Text + " TO " + txbRoleOrUserName.Text.Trim() + " with grant option";
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);
                         Support.Disconnect();
@@ -152,7 +152,7 @@ namespace WindowsFormsApp1.Admin
                     else
                     {
                         
-                        string sql = "GRANT " + comboBox2.Text + " (" + textBox5.Text + ") ON " + comboBox1.Text + " TO " + textBox4.Text.Trim() + "";
+                        string sql = "GRANT " + cbbPrivilege.Text + " (" + txbColumn.Text + ") ON " + cbbTable.Text + " TO " + txbRoleOrUserName.Text.Trim() + "";
                         MessageBox.Show(sql);
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);

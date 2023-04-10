@@ -22,7 +22,7 @@ namespace WindowsFormsApp1.Admin
             this.password = password;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnShowAllTable_Click(object sender, EventArgs e)
         {
             string sql = "SELECT table_name,tablespace_name FROM ALL_TABLES WHERE OWNER='ADMIN'";
             Support.InitConnection(this.username, this.password);
@@ -35,7 +35,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.username, this.password));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Thread t;
             this.Close();
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1.Admin
             t.Start();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnShowAllView_Click(object sender, EventArgs e)
         {
             string sql = "SELECT view_name,text FROM ALL_VIEWS WHERE OWNER='ADMIN'";
             Support.InitConnection(this.username, this.password);

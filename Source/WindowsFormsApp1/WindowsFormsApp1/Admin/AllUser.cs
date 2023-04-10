@@ -39,7 +39,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.userName,this.password));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Thread t;
             this.Close();

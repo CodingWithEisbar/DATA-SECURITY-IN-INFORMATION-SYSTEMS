@@ -27,7 +27,7 @@ namespace WindowsFormsApp1.Admin
         
         private void loadData()
         {
-            string sql = "select column_name from all_tab_columns where table_name = '" + comboBox1.Text.Trim().ToUpper() + "'";
+            string sql = "select column_name from all_tab_columns where table_name = '" + cbbTable.Text.Trim().ToUpper() + "'";
             Support.InitConnection(this.username, this.password);
             dataGridView1.DataSource = Support.GetDataToTable(sql);
             Support.Disconnect();
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1.Admin
             Support.Disconnect();
             foreach (DataRow row in all_role.Rows)
             {
-                comboBox3.Items.Add(row["ROLE"]).ToString();
+                cbbRole.Items.Add(row["ROLE"]).ToString();
             }
             sql = "select username from dba_users where last_login is not null and default_tablespace='USERS'";
             Support.InitConnection(this.username, this.password);
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1.Admin
             Support.Disconnect();
             foreach (DataRow row in all_user.Rows)
             {
-                comboBox4.Items.Add(row["username"]).ToString();
+                cbbUSER.Items.Add(row["username"]).ToString();
             }
         }
 
@@ -59,9 +59,9 @@ namespace WindowsFormsApp1.Admin
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnRevokeRole_Click(object sender, EventArgs e)
         {
-            string sql = "revoke "+comboBox3.Text+" from "+ comboBox4.Text;
+            string sql = "revoke "+cbbRole.Text+" from "+ cbbUSER.Text;
            
                 Support.InitConnection(this.username, this.password);
                 Support.RunSQL(sql);
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.username, this.password));
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             //Nút quay lại
             Thread t;
@@ -82,11 +82,11 @@ namespace WindowsFormsApp1.Admin
             t.Start();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRevokePrivilege_Click(object sender, EventArgs e)
         {
-            if (comboBox2.Text != "UPDATE")
+            if (cbbPrivilege.Text != "UPDATE")
             {
-                    string sql = "REVOKE " + comboBox2.Text + " ON " + comboBox1.Text + " FROM " + textBox4.Text.Trim() + "";
+                    string sql = "REVOKE " + cbbPrivilege.Text + " ON " + cbbTable.Text + " FROM " + txbRoleOrUserName.Text.Trim() + "";
                     Support.InitConnection(this.username, this.password);
                     Support.RunSQL(sql);
                     Support.Disconnect();
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1.Admin
                 //if (textBox5.Text == "")
                 //{
                     
-                        string sql = "REVOKE " + comboBox2.Text + " ON " + comboBox1.Text + " FROM " + textBox4.Text.Trim() + "";
+                        string sql = "REVOKE " + cbbPrivilege.Text + " ON " + cbbTable.Text + " FROM " + txbRoleOrUserName.Text.Trim() + "";
                         Support.InitConnection(this.username, this.password);
                         Support.RunSQL(sql);
                         Support.Disconnect();

@@ -79,3 +79,4 @@ C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsA
 C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.NhanSu.NhanSu_Main.resources
 C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.TaiChinh.TaiChinh_Main.resources
+C:\Users\Admin\Desktop\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.NhanSu.NhanSu_INS_UPD_SHOW_Phongban.resources

@@ -23,22 +23,22 @@ namespace WindowsFormsApp1.Admin
             this.password = password;  
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             Support.InitConnection(this.userName, this.password);
             string sql = "alter session set \"_ORACLE_SCRIPT\"=true";
             Support.RunSQL(sql);
-            sql = "DROP USER " + textBox1.Text.Trim().ToUpper();
+            sql = "DROP USER " + txbUserOrRole.Text.Trim().ToUpper();
             Support.RunSQL(sql);
             Support.Disconnect();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnDeleteRole_Click(object sender, EventArgs e)
         {
             Support.InitConnection(this.userName, this.password);
             string sql = "alter session set \"_ORACLE_SCRIPT\"=true";
             Support.RunSQL(sql);
-            sql = "DROP ROLE " + textBox1.Text.Trim().ToUpper();
+            sql = "DROP ROLE " + txbUserOrRole.Text.Trim().ToUpper();
             Support.RunSQL(sql);
             Support.Disconnect();
         }
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.userName, this.password));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Thread t;
             this.Close();

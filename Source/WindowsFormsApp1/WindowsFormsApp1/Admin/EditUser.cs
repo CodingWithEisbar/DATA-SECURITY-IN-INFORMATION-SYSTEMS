@@ -24,9 +24,9 @@ namespace WindowsFormsApp1.Admin
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked == true)
+            if (chboxUnlock.Checked == true)
             {
-                checkBox1.Checked = false;
+                chboxLock.Checked = false;
             }
         }
 
@@ -35,32 +35,32 @@ namespace WindowsFormsApp1.Admin
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text.Trim()==""|| textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "")
+            if(txbUserName.Text.Trim()==""|| txbPassword.Text.Trim() == "" || txbNewPassword.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
             }
-            else if(checkBox1.Checked==false&&checkBox2.Checked == false)
+            else if(chboxLock.Checked==false&&chboxUnlock.Checked == false)
             {
                 MessageBox.Show("Vui lòng chọn Lock hoặc Unlock");
             }    
             else
             {
-                if(Support.InitConnection(textBox1.Text.Trim(),textBox2.Text.Trim())=="")
+                if(Support.InitConnection(txbUserName.Text.Trim(),txbPassword.Text.Trim())=="")
                 {
                     Support.Disconnect();
                     Support.InitConnection(this.username, this.password);
                     string sql= "alter session set \"_ORACLE_SCRIPT\"=true";
                     Support.RunSQL(sql);
-                    if(checkBox1.Checked==true)
+                    if(chboxLock.Checked==true)
                     {
-                        sql = "ALTER USER "+ textBox1.Text.Trim() + " IDENTIFIED BY "+textBox3.Text.Trim()+"  ACCOUNT LOCK";
+                        sql = "ALTER USER "+ txbUserName.Text.Trim() + " IDENTIFIED BY "+txbNewPassword.Text.Trim()+"  ACCOUNT LOCK";
                         Support.RunSQL(sql); 
                     }
                     else
                     {
-                        sql = "ALTER USER " + textBox1.Text.Trim() + " IDENTIFIED BY " + textBox3.Text.Trim() + "  ACCOUNT UNLOCK";
+                        sql = "ALTER USER " + txbUserName.Text.Trim() + " IDENTIFIED BY " + txbNewPassword.Text.Trim() + "  ACCOUNT UNLOCK";
                         Support.RunSQL(sql);
                     }    
                 }
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Main(this.username, this.password));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Thread t;
             this.Close();
@@ -82,9 +82,9 @@ namespace WindowsFormsApp1.Admin
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked==true)
+            if(chboxLock.Checked==true)
             {
-                checkBox2.Checked = false;
+                chboxUnlock.Checked = false;
             }    
         }
     }

@@ -22,7 +22,7 @@ namespace WindowsFormsApp1.Admin
             this.userName = userName;
             this.password = password;
             InitializeComponent();
-            textBox2.Text = userName.ToUpper().Trim();
+            txbShowUSERNAME.Text = userName.ToUpper().Trim();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new TableAndView(this.userName, this.password));
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnUSER_Click(object sender, EventArgs e)
         {
            this.Close();
            t = new Thread(AllUser);
@@ -83,7 +83,7 @@ namespace WindowsFormsApp1.Admin
             Application.Run(new Login());
 
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             
             Thread t;
@@ -93,21 +93,21 @@ namespace WindowsFormsApp1.Admin
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
             this.Close();
             t = new Thread(CreateUser);
             t.Start();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnGrantPrivilege_Click(object sender, EventArgs e)
         {
             this.Close();
             t = new Thread(GrantAndEditPrivilegesUserOrRule);
             t.Start();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
 
             this.Close();
@@ -115,28 +115,28 @@ namespace WindowsFormsApp1.Admin
             t.Start();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             this.Close();
             t = new Thread(EditUser);
             t.Start();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnRevokePrivilege_Click(object sender, EventArgs e)
         {
             this.Close();
             t = new Thread(RevokePrivilege);
             t.Start();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnShowTableView_Click(object sender, EventArgs e)
         {
             this.Close();
             t = new Thread(TableAndView);
             t.Start();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnPrivilege_Click(object sender, EventArgs e)
         {
             this.Close();
             t = new Thread(ListPrivileges);

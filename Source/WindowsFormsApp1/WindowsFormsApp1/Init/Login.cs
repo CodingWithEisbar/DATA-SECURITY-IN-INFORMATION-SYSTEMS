@@ -25,7 +25,7 @@ namespace WindowsFormsApp1.Init
         public Login()
         {
             InitializeComponent();
-            textBox2.PasswordChar = '*';
+            txbPassword.PasswordChar = '*';
 
         }
 
@@ -61,15 +61,15 @@ namespace WindowsFormsApp1.Init
         {
             try
             {
-                this.userName= textBox1.Text.Trim();
-                this.password= textBox2.Text.Trim();   
+                this.userName= txbUserName.Text.Trim();
+                this.password= txbPassword.Text.Trim();   
                 InitLogin(this.userName, this.password);
                 this.Close();
                 if (this.userName.Contains(NSu))
                 {
                     t = new Thread(NhanSu);
                 }
-                if (this.userName == "admin" || this.userName == "ADMIN")
+                if (this.userName.ToLower() == "admin")
                 { 
                     t = new Thread(Main); 
                 }
