@@ -51,9 +51,10 @@
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.txbShowUSERNAME);
             this.panel2.Controls.Add(this.txbSHOWUSERROLE);
-            this.panel2.Location = new System.Drawing.Point(0, -3);
+            this.panel2.Location = new System.Drawing.Point(0, -5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(341, 265);
+            this.panel2.Size = new System.Drawing.Size(512, 408);
             this.panel2.TabIndex = 1;
             // 
             // btnLogout
@@ -61,9 +62,10 @@
             this.btnLogout.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(116, 139);
+            this.btnLogout.Location = new System.Drawing.Point(174, 68);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(112, 34);
+            this.btnLogout.Size = new System.Drawing.Size(168, 52);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -74,10 +76,11 @@
             this.txbShowUSERNAME.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txbShowUSERNAME.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbShowUSERNAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbShowUSERNAME.Location = new System.Drawing.Point(116, 73);
+            this.txbShowUSERNAME.Location = new System.Drawing.Point(174, 112);
+            this.txbShowUSERNAME.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbShowUSERNAME.Name = "txbShowUSERNAME";
             this.txbShowUSERNAME.ReadOnly = true;
-            this.txbShowUSERNAME.Size = new System.Drawing.Size(112, 22);
+            this.txbShowUSERNAME.Size = new System.Drawing.Size(168, 33);
             this.txbShowUSERNAME.TabIndex = 1;
             this.txbShowUSERNAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -85,16 +88,16 @@
             // 
             this.txbSHOWUSERROLE.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txbSHOWUSERROLE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbSHOWUSERROLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSHOWUSERROLE.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbSHOWUSERROLE.ForeColor = System.Drawing.Color.Red;
-            this.txbSHOWUSERROLE.Location = new System.Drawing.Point(105, 15);
+            this.txbSHOWUSERROLE.Location = new System.Drawing.Point(158, 23);
+            this.txbSHOWUSERROLE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbSHOWUSERROLE.Name = "txbSHOWUSERROLE";
             this.txbSHOWUSERROLE.ReadOnly = true;
-            this.txbSHOWUSERROLE.Size = new System.Drawing.Size(134, 22);
+            this.txbSHOWUSERROLE.Size = new System.Drawing.Size(201, 35);
             this.txbSHOWUSERROLE.TabIndex = 0;
             this.txbSHOWUSERROLE.Text = "DBA";
             this.txbSHOWUSERROLE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txbSHOWUSERROLE.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnUSER
             // 
@@ -105,9 +108,10 @@
             this.btnUSER.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnUSER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUSER.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUSER.Location = new System.Drawing.Point(3, 0);
+            this.btnUSER.Location = new System.Drawing.Point(4, 0);
+            this.btnUSER.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUSER.Name = "btnUSER";
-            this.btnUSER.Size = new System.Drawing.Size(335, 43);
+            this.btnUSER.Size = new System.Drawing.Size(502, 66);
             this.btnUSER.TabIndex = 2;
             this.btnUSER.Text = "User";
             this.btnUSER.UseVisualStyleBackColor = false;
@@ -122,9 +126,10 @@
             this.btnPrivilege.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnPrivilege.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrivilege.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrivilege.Location = new System.Drawing.Point(3, 49);
+            this.btnPrivilege.Location = new System.Drawing.Point(4, 75);
+            this.btnPrivilege.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPrivilege.Name = "btnPrivilege";
-            this.btnPrivilege.Size = new System.Drawing.Size(335, 43);
+            this.btnPrivilege.Size = new System.Drawing.Size(502, 66);
             this.btnPrivilege.TabIndex = 3;
             this.btnPrivilege.Text = "Privileges User/Role";
             this.btnPrivilege.UseVisualStyleBackColor = false;
@@ -139,9 +144,10 @@
             this.btnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(3, 98);
+            this.btnCreate.Location = new System.Drawing.Point(4, 151);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(335, 43);
+            this.btnCreate.Size = new System.Drawing.Size(502, 66);
             this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "Create User/Role";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -156,9 +162,10 @@
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(3, 147);
+            this.btnDelete.Location = new System.Drawing.Point(4, 226);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(335, 43);
+            this.btnDelete.Size = new System.Drawing.Size(502, 66);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete User/Role";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -173,9 +180,10 @@
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(3, 202);
+            this.btnEdit.Location = new System.Drawing.Point(4, 311);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(335, 43);
+            this.btnEdit.Size = new System.Drawing.Size(502, 66);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Edit User";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -190,9 +198,10 @@
             this.btnGrantPrivilege.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGrantPrivilege.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrantPrivilege.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrantPrivilege.Location = new System.Drawing.Point(3, 251);
+            this.btnGrantPrivilege.Location = new System.Drawing.Point(4, 386);
+            this.btnGrantPrivilege.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGrantPrivilege.Name = "btnGrantPrivilege";
-            this.btnGrantPrivilege.Size = new System.Drawing.Size(335, 43);
+            this.btnGrantPrivilege.Size = new System.Drawing.Size(502, 66);
             this.btnGrantPrivilege.TabIndex = 7;
             this.btnGrantPrivilege.Text = "Grant And Edit Privileges User/Role";
             this.btnGrantPrivilege.UseVisualStyleBackColor = false;
@@ -207,9 +216,10 @@
             this.btnRevokePrivilege.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnRevokePrivilege.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRevokePrivilege.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevokePrivilege.Location = new System.Drawing.Point(3, 300);
+            this.btnRevokePrivilege.Location = new System.Drawing.Point(4, 462);
+            this.btnRevokePrivilege.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRevokePrivilege.Name = "btnRevokePrivilege";
-            this.btnRevokePrivilege.Size = new System.Drawing.Size(335, 43);
+            this.btnRevokePrivilege.Size = new System.Drawing.Size(502, 66);
             this.btnRevokePrivilege.TabIndex = 8;
             this.btnRevokePrivilege.Text = "Revoke Privileges User/Role";
             this.btnRevokePrivilege.UseVisualStyleBackColor = false;
@@ -226,9 +236,10 @@
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnCreate);
             this.panel1.Controls.Add(this.btnPrivilege);
-            this.panel1.Location = new System.Drawing.Point(0, 258);
+            this.panel1.Location = new System.Drawing.Point(0, 397);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 409);
+            this.panel1.Size = new System.Drawing.Size(512, 629);
             this.panel1.TabIndex = 0;
             // 
             // btnShowTableView
@@ -240,9 +251,10 @@
             this.btnShowTableView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnShowTableView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowTableView.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowTableView.Location = new System.Drawing.Point(6, 349);
+            this.btnShowTableView.Location = new System.Drawing.Point(9, 537);
+            this.btnShowTableView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnShowTableView.Name = "btnShowTableView";
-            this.btnShowTableView.Size = new System.Drawing.Size(332, 43);
+            this.btnShowTableView.Size = new System.Drawing.Size(498, 66);
             this.btnShowTableView.TabIndex = 9;
             this.btnShowTableView.Text = "Table/View";
             this.btnShowTableView.UseVisualStyleBackColor = false;
@@ -250,13 +262,14 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1129, 666);
+            this.ClientSize = new System.Drawing.Size(1694, 1025);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.Text = "Main";
             this.panel2.ResumeLayout(false);

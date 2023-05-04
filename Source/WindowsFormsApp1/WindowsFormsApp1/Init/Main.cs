@@ -25,10 +25,6 @@ namespace WindowsFormsApp1.Admin
             txbShowUSERNAME.Text = userName.ToUpper().Trim();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         [Obsolete]
         private void AllUser()

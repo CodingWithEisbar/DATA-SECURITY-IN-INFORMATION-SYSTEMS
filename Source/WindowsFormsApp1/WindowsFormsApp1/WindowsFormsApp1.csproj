@@ -148,6 +148,24 @@
     <Compile Include="TaiChinh\TaiChinh_Main.Designer.cs">
       <DependentUpon>TaiChinh_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruongDeAn\ChinhSuaDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ChinhSuaDeAn.Designer.cs">
+      <DependentUpon>ChinhSuaDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\TruongDeAn_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\TruongDeAn_Main.Designer.cs">
+      <DependentUpon>TruongDeAn_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\XemDanhSachDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\XemDanhSachDeAn.Designer.cs">
+      <DependentUpon>XemDanhSachDeAn.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\AllUser.resx">
       <DependentUpon>AllUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +213,15 @@
     </Compile>
     <EmbeddedResource Include="TaiChinh\TaiChinh_Main.resx">
       <DependentUpon>TaiChinh_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ChinhSuaDeAn.resx">
+      <DependentUpon>ChinhSuaDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\TruongDeAn_Main.resx">
+      <DependentUpon>TruongDeAn_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\XemDanhSachDeAn.resx">
+      <DependentUpon>XemDanhSachDeAn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

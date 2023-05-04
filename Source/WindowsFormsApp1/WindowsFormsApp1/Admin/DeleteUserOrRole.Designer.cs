@@ -39,9 +39,10 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(60, 39);
+            this.btnBack.Location = new System.Drawing.Point(90, 60);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(118, 34);
+            this.btnBack.Size = new System.Drawing.Size(177, 52);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Quay Lại";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -50,27 +51,30 @@
             // txbUserOrRole
             // 
             this.txbUserOrRole.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbUserOrRole.Location = new System.Drawing.Point(395, 222);
+            this.txbUserOrRole.Location = new System.Drawing.Point(592, 342);
+            this.txbUserOrRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbUserOrRole.Name = "txbUserOrRole";
-            this.txbUserOrRole.Size = new System.Drawing.Size(369, 32);
+            this.txbUserOrRole.Size = new System.Drawing.Size(552, 44);
             this.txbUserOrRole.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 225);
+            this.label1.Location = new System.Drawing.Point(363, 346);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 23);
+            this.label1.Size = new System.Drawing.Size(218, 36);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nhập User/Role";
             // 
             // btnDeleteUser
             // 
             this.btnDeleteUser.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteUser.Location = new System.Drawing.Point(430, 367);
+            this.btnDeleteUser.Location = new System.Drawing.Point(645, 565);
+            this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(126, 34);
+            this.btnDeleteUser.Size = new System.Drawing.Size(189, 52);
             this.btnDeleteUser.TabIndex = 6;
             this.btnDeleteUser.Text = "Xóa User";
             this.btnDeleteUser.UseVisualStyleBackColor = true;
@@ -79,9 +83,10 @@
             // btnDeleteRole
             // 
             this.btnDeleteRole.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteRole.Location = new System.Drawing.Point(614, 367);
+            this.btnDeleteRole.Location = new System.Drawing.Point(921, 565);
+            this.btnDeleteRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteRole.Name = "btnDeleteRole";
-            this.btnDeleteRole.Size = new System.Drawing.Size(126, 34);
+            this.btnDeleteRole.Size = new System.Drawing.Size(189, 52);
             this.btnDeleteRole.TabIndex = 7;
             this.btnDeleteRole.Text = "Xóa Role";
             this.btnDeleteRole.UseVisualStyleBackColor = true;
@@ -92,24 +97,26 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Red;
-            this.textBox2.Location = new System.Drawing.Point(464, 109);
+            this.textBox2.Location = new System.Drawing.Point(696, 168);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 37);
+            this.textBox2.Size = new System.Drawing.Size(294, 56);
             this.textBox2.TabIndex = 8;
             this.textBox2.Text = "Xóa User/Role";
             // 
             // DeleteUserOrRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1012, 643);
+            this.ClientSize = new System.Drawing.Size(1518, 989);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnDeleteRole);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbUserOrRole);
             this.Controls.Add(this.btnBack);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DeleteUserOrRole";
             this.Text = "DeleteUserOrRole";
             this.ResumeLayout(false);
