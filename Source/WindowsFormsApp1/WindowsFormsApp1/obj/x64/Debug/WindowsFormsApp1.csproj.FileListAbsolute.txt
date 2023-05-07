@@ -84,3 +84,5 @@ D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFo
 D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.NhanSu.NhanSu_Main.resources
 D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.TaiChinh.TaiChinh_Main.resources
 D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.TruongDeAn.TruongDeAn_Main.resources
+D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.TruongDeAn.ChinhSuaDeAn.resources
+D:\Bài tập lập trình\DATA-SECURITY-IN-INFORMATION-SYSTEMS\Source\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.TruongDeAn.XemDanhSachDeAn.resources

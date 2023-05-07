@@ -120,7 +120,7 @@
             this.label3.Size = new System.Drawing.Size(114, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "Cột(Update)";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+  
             // 
             // btnGrantPrivilege
             // 
@@ -140,7 +140,7 @@
             this.textBox3.ForeColor = System.Drawing.Color.Red;
             this.textBox3.Location = new System.Drawing.Point(555, 34);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(330, 37);
+            this.textBox3.Size = new System.Drawing.Size(148, 37);
             this.textBox3.TabIndex = 17;
             this.textBox3.Text = "Gán quyền";
             // 
@@ -178,7 +178,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(627, 280);
             this.dataGridView1.TabIndex = 23;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+     
             // 
             // label4
             // 
@@ -189,7 +189,7 @@
             this.label4.Size = new System.Drawing.Size(281, 23);
             this.label4.TabIndex = 24;
             this.label4.Text = "(Dựa vào bảng bên cạnh để điền)";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+
             // 
             // label5
             // 
@@ -211,7 +211,6 @@
             this.chboxWithGrantOption.TabIndex = 27;
             this.chboxWithGrantOption.Text = "with grant option";
             this.chboxWithGrantOption.UseVisualStyleBackColor = true;
-            this.chboxWithGrantOption.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // btnGrantRole
             // 
@@ -252,7 +251,7 @@
             this.cbbRole.Name = "cbbRole";
             this.cbbRole.Size = new System.Drawing.Size(219, 31);
             this.cbbRole.TabIndex = 33;
-            this.cbbRole.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+
             // 
             // cbbUSER
             // 

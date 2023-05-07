@@ -34,9 +34,10 @@ namespace WindowsFormsApp1.TruongDeAn
         {
             Thread t;
             this.Close();
-            t = new Thread(backToLogin); 
+            t = new Thread(backToLogin);
             t.Start();
         }
+
 
     }
 }

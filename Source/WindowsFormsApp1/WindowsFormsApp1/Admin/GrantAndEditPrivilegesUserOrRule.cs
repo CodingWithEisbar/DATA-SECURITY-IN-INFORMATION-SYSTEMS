@@ -35,25 +35,6 @@ namespace WindowsFormsApp1.Admin
             Support.Disconnect();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnGrantRole_Click(object sender, EventArgs e)
         {
@@ -82,10 +63,7 @@ namespace WindowsFormsApp1.Admin
                 cbbUSER.Items.Add(row["username"]).ToString();
             }
         }
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void Home()
         {
