@@ -100,7 +100,7 @@ CREATE USER NV4 IDENTIFIED BY 123;
 GRANT CREATE SESSION TO NV4;
 
 grant execute on dbms_rls to admin;
-
+grant execute on dbms_crypto to admid
 
 
 
