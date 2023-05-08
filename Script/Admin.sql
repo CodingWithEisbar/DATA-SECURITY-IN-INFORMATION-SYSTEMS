@@ -112,3 +112,5 @@ GRANT SELECT ON SYS.FGA_LOG$ TO admin;
 
 
 
+
+
