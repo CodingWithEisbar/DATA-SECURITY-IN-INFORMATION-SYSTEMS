@@ -15,11 +15,11 @@ namespace WindowsFormsApp1.TaiChinh
     public partial class TaiChinh_Main : Form
     {
         Thread t;
-        private string userName;
+        private string username;
         private string password;
         public TaiChinh_Main(string userName, string password)
         {
-            this.userName = userName;
+            this.username = userName;
             this.password = password;
             InitializeComponent();
             txbUserName.Text = userName.ToUpper().Trim();
@@ -37,6 +37,12 @@ namespace WindowsFormsApp1.TaiChinh
             this.Close();
             t = new Thread(BackToLogin);
             t.Start();
+        }
+
+        [Obsolete]
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Application.Run(new ThongTinTaiChinh(this.username, this.password));
         }
     }
 }

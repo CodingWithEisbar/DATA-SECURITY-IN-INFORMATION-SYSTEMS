@@ -37,43 +37,50 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Location = new System.Drawing.Point(18, 18);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(118, 34);
+            this.btnBack.Size = new System.Drawing.Size(177, 52);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Quay Lại";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // thongTinTruongDeAnLabel
             // 
             this.thongTinTruongDeAnLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.thongTinTruongDeAnLabel.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thongTinTruongDeAnLabel.ForeColor = System.Drawing.Color.Red;
-            this.thongTinTruongDeAnLabel.Location = new System.Drawing.Point(276, 67);
+            this.thongTinTruongDeAnLabel.Location = new System.Drawing.Point(414, 103);
+            this.thongTinTruongDeAnLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.thongTinTruongDeAnLabel.Name = "thongTinTruongDeAnLabel";
-            this.thongTinTruongDeAnLabel.Size = new System.Drawing.Size(308, 37);
+            this.thongTinTruongDeAnLabel.Size = new System.Drawing.Size(462, 56);
             this.thongTinTruongDeAnLabel.TabIndex = 19;
             this.thongTinTruongDeAnLabel.Text = "Thông tin trưởng đề án";
             // 
             // thongTinTruongDADataGridView
             // 
             this.thongTinTruongDADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.thongTinTruongDADataGridView.Location = new System.Drawing.Point(12, 130);
+            this.thongTinTruongDADataGridView.Location = new System.Drawing.Point(18, 200);
+            this.thongTinTruongDADataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.thongTinTruongDADataGridView.Name = "thongTinTruongDADataGridView";
-            this.thongTinTruongDADataGridView.Size = new System.Drawing.Size(861, 359);
+            this.thongTinTruongDADataGridView.ReadOnly = true;
+            this.thongTinTruongDADataGridView.RowHeadersWidth = 62;
+            this.thongTinTruongDADataGridView.Size = new System.Drawing.Size(1292, 552);
             this.thongTinTruongDADataGridView.TabIndex = 20;
             // 
             // ThongTinTruongDeAn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(885, 501);
+            this.ClientSize = new System.Drawing.Size(1329, 771);
             this.Controls.Add(this.thongTinTruongDADataGridView);
             this.Controls.Add(this.thongTinTruongDeAnLabel);
             this.Controls.Add(this.btnBack);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ThongTinTruongDeAn";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin Trưởng đề án";
             ((System.ComponentModel.ISupportInitialize)(this.thongTinTruongDADataGridView)).EndInit();
             this.ResumeLayout(false);

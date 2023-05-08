@@ -9,6 +9,7 @@ BEGIN
     statement_types => 'UPDATE');
 END;
 /
+
 BEGIN
 DBMS_FGA.ENABLE_POLICY (
 object_schema      =>  'SYS', 
@@ -53,6 +54,5 @@ object_schema      =>  'SYS',
     policy_name        =>  'CAU_C');
 END;
 /
-
 
 

@@ -73,6 +73,12 @@
     <Compile Include="Admin\AllUser.Designer.cs">
       <DependentUpon>AllUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Audit.designer.cs">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,12 @@
     <Compile Include="Init\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\NhanVien_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\NhanVien_Main.designer.cs">
+      <DependentUpon>NhanVien_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanSu\NhanSu_INS_UPD_SHOW_Phongban.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,12 @@
     </Compile>
     <Compile Include="TaiChinh\TaiChinh_Main.Designer.cs">
       <DependentUpon>TaiChinh_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinTaiChinh.Designer.cs">
+      <DependentUpon>ThongTinTaiChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="TruongDeAn\ChinhSuaDeAn.cs">
       <SubType>Form</SubType>
@@ -175,6 +193,9 @@
     <EmbeddedResource Include="Admin\AllUser.resx">
       <DependentUpon>AllUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Audit.resx">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +223,9 @@
     <EmbeddedResource Include="Init\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\NhanVien_Main.resx">
+      <DependentUpon>NhanVien_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\NhanSu_INS_UPD_SHOW_Phongban.resx">
       <DependentUpon>NhanSu_INS_UPD_SHOW_Phongban.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +243,9 @@
     </Compile>
     <EmbeddedResource Include="TaiChinh\TaiChinh_Main.resx">
       <DependentUpon>TaiChinh_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\ThongTinTaiChinh.resx">
+      <DependentUpon>ThongTinTaiChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruongDeAn\ChinhSuaDeAn.resx">
       <DependentUpon>ChinhSuaDeAn.cs</DependentUpon>

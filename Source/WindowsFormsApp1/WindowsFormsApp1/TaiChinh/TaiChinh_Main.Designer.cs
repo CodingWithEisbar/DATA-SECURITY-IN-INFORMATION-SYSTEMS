@@ -55,7 +55,7 @@ namespace WindowsFormsApp1.TaiChinh
             this.btnDangXuat.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.Location = new System.Drawing.Point(118, 136);
+            this.btnDangXuat.Location = new System.Drawing.Point(109, 136);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(112, 34);
             this.btnDangXuat.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1.TaiChinh
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(50, 28);
+            this.textBox1.Location = new System.Drawing.Point(46, 37);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(258, 28);
@@ -113,6 +113,7 @@ namespace WindowsFormsApp1.TaiChinh
             this.btnProfile.TabIndex = 2;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // TaiChinh_Main
             // 
@@ -121,9 +122,9 @@ namespace WindowsFormsApp1.TaiChinh
             this.ClientSize = new System.Drawing.Size(1040, 623);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TaiChinh_Main";
-            this.Text = "TaiChinh_Main";
+            this.Text = "Dashboard";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

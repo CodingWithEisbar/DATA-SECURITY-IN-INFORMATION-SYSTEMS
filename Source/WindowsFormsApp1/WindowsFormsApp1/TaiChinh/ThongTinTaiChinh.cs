@@ -9,14 +9,15 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.TruongDeAn;
 
-namespace WindowsFormsApp1.TruongDeAn
+namespace WindowsFormsApp1.TaiChinh
 {
-    public partial class ThongTinTruongDeAn : Form
+    public partial class ThongTinTaiChinh : Form
     {
         string username;
         string password;
-        public ThongTinTruongDeAn(string username, string password)
+        public ThongTinTaiChinh(string username, string password)
         {
             InitializeComponent();
             this.username = username;
@@ -24,23 +25,22 @@ namespace WindowsFormsApp1.TruongDeAn
             loadData();
         }
 
-        private void loadData ()
+        private void loadData()
         {
-            string sql_query = "SELECT * FROM ADMIN.NHANVIEN";
+            string sql_query = "SELECT * FROM ADMIN.NHANVIEN WHERE USERNAME = '" + username + "'";
             Support.InitConnection(this.username, this.password);
-            thongTinTruongDADataGridView.DataSource = Support.GetDataToTable(sql_query);
+            thongTinTaiChinhDataGridView.DataSource = Support.GetDataToTable(sql_query);
             Support.Disconnect();
         }
-        
-        private void TruongDeAn_Main()
+        private void TaiChinh_Main()
         {
-            Application.Run(new TruongDeAn_Main(this.username, this.password));
+            Application.Run(new TaiChinh_Main(this.username, this.password));
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
             Thread t;
             this.Close();
-            t = new Thread(TruongDeAn_Main);
+            t = new Thread(TaiChinh_Main);
             t.Start();
         }
     }

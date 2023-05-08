@@ -19,8 +19,8 @@ CREATE TABLE NHANVIEN (
     LUONG NUMBER(7,2),
     PHUCAP NUMBER(7,2),
     VAITRO VARCHAR2(100),
-    MANQL NUMBER(4),
-    PHG NUMBER(4),
+    MANQL NUMBER,
+    PHG NUMBER,
     USERNAME VARCHAR(100),
     
     CONSTRAINT NHANVIEN_PK
@@ -86,6 +86,52 @@ ALTER TABLE PHANCONG
 ADD CONSTRAINT FK_PHANCONG_DEAN
 FOREIGN KEY(MADA)
 REFERENCES DEAN(MADA);
+
+CREATE OR REPLACE TRIGGER ENCRYPT_NHANVIEN_SODT
+BEFORE INSERT ON NHANVIEN
+FOR EACH ROW
+WHEN (new.MANV > 0)
+DECLARE
+    input_string VARCHAR2(200);
+    encrypted_raw RAW (2000); -- stores encrypted binary text
+    v_key raw(128) := utl_i18n.string_to_raw( 'ATBMHTTT1', 'AL32UTF8' );
+    encryption_type PLS_INTEGER := SYS.DBMS_CRYPTO.ENCRYPT_DES + SYS.DBMS_CRYPTO.CHAIN_CBC + SYS.DBMS_CRYPTO.PAD_PKCS5;
+BEGIN
+    input_string := TO_CHAR(:new.SODT);
+    DBMS_OUTPUT.PUT_LINE(input_string);
+    encrypted_raw := DBMS_CRYPTO.ENCRYPT
+          (
+             src => UTL_I18N.STRING_TO_RAW (input_string,'AL32UTF8'),
+             typ => encryption_type,
+            key => v_key
+         );
+    --DBMS_OUTPUT.PUT_LINE(v_key);
+    input_string := RAWTOHEX(encrypted_raw);
+    :new.SODT :=input_string;
+END;
+/
+create or replace function ENCRYPT_SODT(p_data in varchar2)
+    return varchar2  
+as
+    input_string VARCHAR2(200);
+    encrypted_raw RAW (2000); -- stores encrypted binary text
+    v_key raw(128) := utl_i18n.string_to_raw( 'ATBMHTTT1', 'AL32UTF8' );
+    encryption_type PLS_INTEGER := SYS.DBMS_CRYPTO.ENCRYPT_DES + SYS.DBMS_CRYPTO.CHAIN_CBC + SYS.DBMS_CRYPTO.PAD_PKCS5;
+BEGIN
+    input_string := TO_CHAR(p_data);
+    DBMS_OUTPUT.PUT_LINE(input_string);
+    encrypted_raw := DBMS_CRYPTO.ENCRYPT
+          (
+             src => UTL_I18N.STRING_TO_RAW (input_string,'AL32UTF8'),
+             typ => encryption_type,
+            key => v_key
+         );
+    --DBMS_OUTPUT.PUT_LINE(v_key);
+    input_string := RAWTOHEX(encrypted_raw);
+    return input_string;
+END;
+/
+
 
 ----------------------------------------------------------------------------------
 --- NHAP THONG TIN VAO BANG
@@ -245,3 +291,89 @@ grant TruongDeAn to TDA2;
 grant TruongDeAn to TDA3;
 
 create role GeneralRole;
+
+BEGIN
+DBMS_FGA.DROP_POLICY(
+  object_schema      => 'admin',
+  object_name        => 'phancong',
+  policy_name        => 'CHECK_thoigian_ON_phancong');
+END;
+/
+-- tao policy
+BEGIN
+  DBMS_FGA.ADD_POLICY(
+   object_schema      => 'admin',
+   object_name        => 'phancong',
+   policy_name        => 'CHECK_thoigian_ON_phancong',
+   enable             =>  TRUE,
+   statement_types    => 'UPDATE',
+   audit_column       => 'thoigian',
+   audit_trail        =>  DBMS_FGA.DB + DBMS_FGA.EXTENDED);
+END;
+/
+
+CREATE OR REPLACE FUNCTION system.CheckFGA(pTxtUser IN VARCHAR2)
+    RETURN PLS_INTEGER IS
+    BEGIN
+        IF(UPPER(pTxtUser) = 'SYS_CONTEXT(''USERENV'', ''SESSION_USER'')') THEN
+            RETURN 0;
+        ELSE
+            RETURN 1;
+        END IF;
+    END;
+/
+BEGIN
+DBMS_FGA.DROP_POLICY(
+  object_schema      => 'admin',
+  object_name        => 'nhanvien',
+  policy_name        => 'luong_phucap_audit');
+END;
+/
+BEGIN
+        DBMS_FGA.ADD_POLICY(OBJECT_SCHEMA   => 'admin'
+                            , OBJECT_NAME     => 'nhanvien'
+                            , POLICY_NAME     => 'luong_phucap_audit'
+                            , enable             =>  TRUE
+                            , AUDIT_CONDITION => 'SYSTEM.CheckFGA(SYS_CONTEXT(''USERENV'', ''SESSION_USER'')) = 1'
+                            , STATEMENT_TYPES => 'select'
+                            ,audit_column       => 'luong,phucap'
+                            ,audit_trail        =>  DBMS_FGA.DB + DBMS_FGA.EXTENDED);
+    END;
+    /
+    
+CREATE OR REPLACE FUNCTION system.CheckFGA2(pTxtUser IN VARCHAR2)
+    RETURN PLS_INTEGER IS
+    BEGIN
+        IF(UPPER(pTxtUser)like 'TC%' ) THEN
+            RETURN 0;
+        ELSE
+            RETURN 1;
+        END IF;
+    END;
+/
+BEGIN
+DBMS_FGA.DROP_POLICY(
+  object_schema      => 'admin',
+  object_name        => 'nhanvien',
+  policy_name        => 'luong_phucap_audit2');
+END;
+/
+BEGIN
+        DBMS_FGA.ADD_POLICY(OBJECT_SCHEMA   => 'admin'
+                            , OBJECT_NAME     => 'nhanvien'
+                            , POLICY_NAME     => 'luong_phucap_audit2'
+                            , enable             =>  TRUE
+                            , AUDIT_CONDITION => 'SYSTEM.CheckFGA2(SYS_CONTEXT(''USERENV'', ''SESSION_USER'')) = 1'
+                            , STATEMENT_TYPES => 'update'
+                            ,audit_column       => 'luong,phucap'
+                            ,audit_trail        =>  DBMS_FGA.DB + DBMS_FGA.EXTENDED);
+    END;
+    /
+
+alter system set audit_trail = DB,EXTENDED scope = spfile;
+shutdown immediate;
+startup;
+-- Theo doi hanh vi cua cac user tren tat ca cac table
+AUDIT ALL ON admin.phancong BY ACCESS;
+select*from admin.nhanvien;
+SELECT DBUID, LSQLTEXT, NTIMESTAMP# FROM SYS.FGA_LOG$;
