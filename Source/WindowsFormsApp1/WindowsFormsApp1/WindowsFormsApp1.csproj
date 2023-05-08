@@ -154,6 +154,12 @@
     <Compile Include="TruongDeAn\ChinhSuaDeAn.Designer.cs">
       <DependentUpon>ChinhSuaDeAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruongDeAn\ThongTinTruongDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinTruongDeAn.Designer.cs">
+      <DependentUpon>ThongTinTruongDeAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruongDeAn\TruongDeAn_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TruongDeAn\ChinhSuaDeAn.resx">
       <DependentUpon>ChinhSuaDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ThongTinTruongDeAn.resx">
+      <DependentUpon>ThongTinTruongDeAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruongDeAn\TruongDeAn_Main.resx">
       <DependentUpon>TruongDeAn_Main.cs</DependentUpon>
