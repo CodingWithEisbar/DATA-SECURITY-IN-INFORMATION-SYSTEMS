@@ -16,7 +16,50 @@ begin
     return output_string;  
 end; 
 /
+--TAO FUNCTION DECRYPT LUONG
+create or replace function decrypt_LUONG (p_data in varchar2)  
+    return varchar2  
+as  
+    output_string varchar2(200);
+    decrypted_raw RAW (200); -- stores decrypted binary text
+    v_key raw(128) := utl_i18n.string_to_raw('ATBMHTTT01', 'AL32UTF8');
+    encryption_type PLS_INTEGER := SYS.DBMS_CRYPTO.ENCRYPT_DES + SYS.DBMS_CRYPTO.CHAIN_CBC + SYS.DBMS_CRYPTO.PAD_PKCS5;
+begin
+    decrypted_raw := DBMS_CRYPTO.Decrypt
+        (
+            src =>  HEXTORAW(p_data),
+            typ => encryption_type,
+            key => v_key
+        );
+    output_string := UTL_I18N.RAW_TO_CHAR (decrypted_raw, 'AL32UTF8');
+    return output_string;
+end; 
+create or replace function decrypt_PHUCAP (p_data in varchar2)  
+    return varchar2  
+as  
+    output_string varchar2(200);
+    decrypted_raw RAW (200); -- stores decrypted binary text
+    v_key raw(128) := utl_i18n.string_to_raw('ATBMHTTT01', 'AL32UTF8');
+    encryption_type PLS_INTEGER := SYS.DBMS_CRYPTO.ENCRYPT_DES + SYS.DBMS_CRYPTO.CHAIN_CBC + SYS.DBMS_CRYPTO.PAD_PKCS5;
+begin
+    decrypted_raw := DBMS_CRYPTO.Decrypt
+        (
+            src =>  HEXTORAW(p_data),
+            typ => encryption_type,
+            key => v_key
+        );
+    output_string := UTL_I18N.RAW_TO_CHAR (decrypted_raw, 'AL32UTF8');
+    return output_string;
+end; 
 
+
+create or replace view  view_decrypt_NHANVIEN_LUONG as 
+    select n.MANV||' '||n.tennv||' has '||decrypt_LUONG(n.LUONG) || ' salary ' as LUONG
+    from NHANVIEN n;
+create or replace view  view_decrypt_NHANVIEN_PHUCAP as 
+    select n.MANV as MANV, decrypt_LUONG(n.PHUCAP) as PHUCAP
+    from NHANVIEN n;
+    
 select MANV,Username,TENNV,PHAI,NGAYSINH,DIACHI,cast(admin.decrypt_SODT(sodt) as nvarchar2(255)) sodt,LUONG,PHUCAP ,VAITRO,MANQL,PHG from admin.nhanvien;
 select*from admin.PhanCong_Select_NV;
 select*from admin.PhongBan;
